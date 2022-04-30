@@ -1,0 +1,2 @@
+git tag 1.0
+git tag -fa 1.0
