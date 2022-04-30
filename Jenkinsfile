@@ -4,21 +4,25 @@ pipeline{
     //             skipDefaultCheckout()
     //         }
     stages{
-//         stage("build"){
-//             agent any
+        stage("build"){
+            // agent any
 
-//             // options{
-//             //     skipDefaultCheckout()
-//             // }
+            // options{
+            //     skipDefaultCheckout()
+            // }
 
-//             steps{
-//                 echo "Hello world"
-//             }
-//         }
+            steps{
+                echo "Hello world"
+            }
+        }
         
-        stage("build-with-tag"){
+        stage("build-with-tags"){
             when {
                 buildingTag()
+            }
+
+            steps {
+                echo "building with tags"
             }
         }
         
@@ -31,7 +35,7 @@ pipeline{
 //                 echo "main deploy"
 //             }
 //         }
-        
+
 //         stage("dev"){
 //             when {
 //                 branch "dev" 
