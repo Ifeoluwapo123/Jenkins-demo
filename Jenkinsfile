@@ -4,36 +4,42 @@ pipeline{
                 skipDefaultCheckout()
             }
     stages{
-        stage("build"){
-            agent any
+//         stage("build"){
+//             agent any
 
-            // options{
-            //     skipDefaultCheckout()
-            // }
+//             // options{
+//             //     skipDefaultCheckout()
+//             // }
 
-            steps{
-                echo "Hello world"
+//             steps{
+//                 echo "Hello world"
+//             }
+//         }
+        
+        stage("build-with-tag"){
+            when {
+                buildingTag()
             }
         }
         
-        stage("master"){
-            when {
-                branch "main"
-            }
+//         stage("master"){
+//             when {
+//                 branch "main"
+//             }
             
-            steps{
-                echo "main deploy"
-            }
-        }
+//             steps{
+//                 echo "main deploy"
+//             }
+//         }
         
-        stage("dev"){
-            when {
-                branch "dev" 
-            }
+//         stage("dev"){
+//             when {
+//                 branch "dev" 
+//             }
             
-            steps {
-                echo "dev deploy"
-            }
-        }
+//             steps {
+//                 echo "dev deploy"
+//             }
+//         }
     }
 }
