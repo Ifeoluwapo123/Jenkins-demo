@@ -10,6 +10,10 @@ pipeline{
             // options{
             //     skipDefaultCheckout()
             // }
+            
+            when { // commit must match this for this stage to execute
+                changelog '.* some texts*.'
+            }
 
             steps{
                 echo "Hello world"
