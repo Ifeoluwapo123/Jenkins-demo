@@ -15,6 +15,8 @@ pipeline{
                 changelog '.* some texts*.' // commit must match this for this stage to execute
                 // changeRequest() // only when PR is raised or
                 // changeRequest title: "when pr" // must have this pr titles
+                // chageset glob: "*.js", caseSensitive: true
+                // beforeAgent: true
                 
             }
 
