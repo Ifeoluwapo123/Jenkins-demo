@@ -2,7 +2,7 @@ pipeline{
     agent none
     options{
         // skipDefaultCheckout()
-        
+        overrideIndexTriggers(false)
     }
     stages{
         stage("build"){
