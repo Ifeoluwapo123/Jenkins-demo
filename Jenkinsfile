@@ -2,6 +2,7 @@ pipeline{
     agent none
     options{
         // skipDefaultCheckout()
+        timeStamps()
         overrideIndexTriggers(false)
     }
     stages{
