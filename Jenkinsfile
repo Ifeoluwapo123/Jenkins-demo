@@ -57,7 +57,9 @@ pipeline{
 //         }
         
         stage("indexTrigger"){
-            echo "builds on commit"
+            steps { 
+                echo "builds on commit"
+            }
         }
     }
 }
