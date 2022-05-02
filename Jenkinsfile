@@ -1,8 +1,9 @@
 pipeline{
     agent none
-    // options{
-    //             skipDefaultCheckout()
-    //         }
+    options{
+        // skipDefaultCheckout()
+        
+    }
     stages{
         stage("build"){
             // agent any
@@ -54,5 +55,9 @@ pipeline{
 //                 echo "dev deploy"
 //             }
 //         }
+        
+        stage("indexTrigger"){
+            echo "builds on commit"
+        }
     }
 }
