@@ -2,8 +2,8 @@ pipeline{
     agent none
     options{
         // skipDefaultCheckout()
-        timestamps()
-        overrideIndexTriggers(true)
+//         timestamps()
+//         overrideIndexTriggers(true)
         checkoutToSubdirectory("nameOfDir")
     }
     stages{
