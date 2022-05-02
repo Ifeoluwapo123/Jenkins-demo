@@ -4,7 +4,7 @@ pipeline{
         // skipDefaultCheckout()
         timestamps()
         overrideIndexTriggers(true)
-        // checkoutToSubdirectory("nameOfDir")
+        checkoutToSubdirectory("nameOfDir")
     }
     stages{
         stage("build"){
